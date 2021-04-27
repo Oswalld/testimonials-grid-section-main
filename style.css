@@ -1,0 +1,163 @@
+:root{
+/*## Colors*/
+
+/*### Primary*/
+
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+/*### Neutral*/
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    background-color: var(--Light-grayish-blue);
+}
+section{
+    margin-left: auto;
+    margin-right: auto;
+    width: 85vw;
+}
+
+/*       
+FONT-SIZE-COLOR-ECT         
+*/
+
+h4{
+    font-weight: 600;
+    color: var(--White);
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+}
+.testi-box p{
+    color: var(--Light-gray);
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+.name{
+    color: var(--White);
+    margin-left: 1rem;
+    font-size: 0.8rem;
+}
+.name > span{
+color: var(--Light-gray);
+font-size: 0.7rem;
+}
+.name-light{
+    color: var(--Very-dark-grayish-blue);
+    margin-left: 1rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+}
+.name-light span{
+    color: var(--Light-gray);
+    font-size: 0.7rem;
+}
+.h4-light{
+    color: var(--Very-dark-grayish-blue);
+}
+
+/*       
+testimonial box BG       
+*/
+.testi-box{
+    padding: 2rem;
+    border-radius: 0.7rem;
+    box-shadow: 1rem 2rem 50px var(--Light-gray);
+}
+.one{
+    background-color: var(--Moderate-violet);
+    background-image: url("/images/bg-pattern-quotation.svg") ;
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+.two{
+    background-color: var(--Very-dark-grayish-blue);
+}
+.three, .five{
+    background-color: var(--White);
+}
+.four{
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+/*       
+testimonial internal box style      
+*/
+.testi-box > div{
+    display: flex;
+    align-items: center;
+}
+.testi-box img{
+    width: 2rem;
+    border-radius: 5rem;
+}
+.one img{
+    border: 2px solid hsl(263, 72%, 65%) ;
+}
+.four img{
+    border: 2px solid var(--Moderate-violet) ;
+}
+.five img, .three img{
+    border: 2px solid var(--White) ;
+}
+
+.testimonials{
+    display:grid ;
+    gap: 2rem 2rem;
+}
+
+.middle-empty-space{
+    height: 5rem;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .testimonials{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+          "one one two five"
+          "three four four five";
+    }
+    .one { grid-area: one; }
+    .two { grid-area: two; }
+    .three { grid-area: three; }
+    .four { grid-area: four; }
+    .five { grid-area: five; }
+
+    .testi-box img{
+        width: 3rem;
+    }
+    h4{
+        font-size: 1.8rem;
+    }
+    .testi-box p{
+        font-size: 1.3rem;
+    }
+    .name{
+        font-size: 1rem;
+    }
+    .name > span{
+    font-size: 1rem;
+    }
+    .name-light{
+        font-size: 1rem;
+    }
+    .name-light span{
+        font-size: 1rem;
+    }
+  }
